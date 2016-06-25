@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>App1</title>
+		<script src="knockout-3.3.0.js" type="text/javascript"></script>
+	</head>
+	<body>
+<div>
+	<p>Firstname: <span data-bind="text: developer.firstName"></span></p>
+	<p>The name is <span data-bind="text: developer.fullName()"></span></p>
+</div>
+
+<div>
+	<form>
+		<p><label for="">First name: <input type="text" /></label></p>
+		<p><label for="">Last name: <input type="text" /></label></p>
+		<p><input type="button" value="Save developer" /></p>
+	</form>
+</div>
+
+<div>
+	<form>
+		<p><label for="">Description: <input type="text" /></label></p>
+		<p><label for="">Status: <input type="text" /></label></p>
+		<p><label for="">Developer: 
+			<select></select>
+		</label></p>
+		<p><input type="button" value="Save bug" /></p>
+	</form>
+
+	<ul data-bind="foreach: developers">
+		<li data-bind="text: fullName"></li>
+	</ul>
+</div>
+
+	</body>
+	<script src="app1.js"></script>
+</html>
